@@ -1,0 +1,33 @@
+.nav-cus{
+  margin-top: 50px;
+  height: 50px;
+  background-color: var(--header-color);
+}
+
+.nav-link:hover{
+    color: rebeccapurple;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .nav-link {
+    font-size: 1px;
+    white-space: nowrap;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+}
+
+.nav-item {
+  padding: 10px 0;
+  margin: 0;
+  display: block;
+}
+.nav-link {
+  font-size: 13px;
+  text-decoration: none;
+}
+.nav-link:active {
+    color: red;
+  }
+  

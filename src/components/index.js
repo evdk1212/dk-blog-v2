@@ -1,0 +1,6 @@
+export {default as HeaderComponent} from './header/headerComponet.tsx'
+export {default as NavbarComponent} from './navbar/navbarComponent.tsx'
+export {default as PostCardComponent} from './postcard/postCard.tsx'
+export {default as CommentFormComponet}  from './comment/commentformComponent.tsx'
+export {default as CommentListComponent} from './comment/commentlistComponent.tsx'
+export {default as ReaderModeComponent} from './readermode/readermodeComponent.tsx'
