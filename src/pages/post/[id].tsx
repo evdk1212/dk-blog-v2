@@ -7,6 +7,8 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import styles from '../../styles/Home.module.css'
 import Image from 'next/image';
+import Head from 'next/head';
+import Layout from '@/components/layout.js';
 const Post = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -45,11 +47,13 @@ const Post = () => {
 
   return (
     <>
+      
 
       {
         singlePost.map(post => (
 
-          <div key={post.id} className={`container ${styles['main2']}`}>
+          <Layout title={post.title} description={post.excerpt} ogTitle={post.title} ogDescription={post.excerpt} ogImage={post.postImgPath} ogUrl={`https://blog.iam-deepak.me/post/${post.id}`}>
+            <div key={post.id} className={`container ${styles['main2']}`}>
             <button onClick={handleToggleReaderMode} className='btn-theme'>
               {readerModeVisible ? "Close Reader Mode" : "Reader Mode"}
             </button>
@@ -91,7 +95,7 @@ const Post = () => {
                   {posts.map(post => (
 
                     <div key={post.id} className="mb-3">
-                      <PostCardComponent  posts={[post]} ></PostCardComponent>
+                      <PostCardComponent posts={[post]} ></PostCardComponent>
                     </div>
 
                   ))}
@@ -100,6 +104,7 @@ const Post = () => {
               </div>
             </div>
           </div>
+          </Layout>
         ))
       }
     </>
