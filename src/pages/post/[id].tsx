@@ -52,7 +52,7 @@ const Post = () => {
       {
         singlePost.map(post => (
 
-          <Layout title={post.title} description={post.excerpt} ogTitle={post.title} ogDescription={post.excerpt} ogImage={post.postImgPath} ogUrl={`https://blog.iam-deepak.me/post/${post.id}`}>
+          <Layout key={post.id} title={post.title} description={post.excerpt} ogTitle={post.title} ogDescription={post.excerpt} ogImage={post.postImgPath} ogUrl={`https://blog.iam-deepak.me/post/${post.id}`}>
             <div key={post.id} className={`container ${styles['main2']}`}>
             <button onClick={handleToggleReaderMode} className='btn-theme'>
               {readerModeVisible ? "Close Reader Mode" : "Reader Mode"}
