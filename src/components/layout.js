@@ -7,15 +7,15 @@ const Layout = ({ children, title, description, ogTitle, ogDescription, ogImage,
     <>
        <Head>
         <title>{title}</title>
-        <meta property="title" content={title==null?  'Deepak - Blog':title}/>
-        <meta property="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* <meta property="title" content={title}/>
+        <meta property="description" content={description} /> */}
+        {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
         <link rel="icon" href="/favicon.ico" />
-        <meta property="url" content={postId==null? 'https://blog.iam-deepak.me':`https://blog.iam-deepak.me/post/${postId}`} />
-        <meta property="type" content="article" />
-        <meta property="site_name" content={title==null?  'Deepak - Blog':title} />
-        <meta property="og:title" content={ogTitle==null? 'Deepak - Blog':title} />
-        <meta property="og:description" content={ogDescription ==null? 'Find interesting daily blog posts by Deepak':description} />
+        {/* <meta property="url" content={postId==null? 'https://blog.iam-deepak.me':`https://blog.iam-deepak.me/post/${postId}`} /> */}
+        {/* <meta property="type" content="article" /> */}
+        {/* <meta property="site_name" content={title} /> */}
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
         <meta property="og:image" content={ogImage} />
       </Head>
       <Header />
