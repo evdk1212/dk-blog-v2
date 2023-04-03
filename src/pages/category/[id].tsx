@@ -69,7 +69,7 @@ const CategoryPage = () => {
             ogTitle={post?.category?.category}
             ogDescription={`Discover everything you need to know about ${post?.category?.category}`}
             ogImage={undefined}
-            ogUrl={`https://blog.iam-deepak.me/category/${post?.category?.categoryId}`}
+            postId={undefined}
         >
             <div className={` ${styles['main2']} `}>
                 {filteredCategoryPosts.length > 0 && getCategory(post)}

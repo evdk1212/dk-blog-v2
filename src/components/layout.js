@@ -2,7 +2,7 @@ import Navbar from "./navbar/navbarComponent.tsx";
 import Header from "./header/headerComponet.tsx";
 import Head from "next/head.js";
 
-const Layout = ({ children, title, description, ogTitle, ogDescription, ogImage,ogUrl }) => {
+const Layout = ({ children, title, description, ogTitle, ogDescription, ogImage, postId }) => {
   return (
     <>
        <Head>
@@ -11,7 +11,7 @@ const Layout = ({ children, title, description, ogTitle, ogDescription, ogImage,
         <meta property="description" content={description==null?  'Find interesting daily blog posts by Deepak':description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="url" content={ogUrl==null? 'https://blog.iam-deepak.me':ogUrl} />
+        <meta property="url" content={postId==null? 'https://blog.iam-deepak.me':`https://blog.iam-deepak.me/post/${postId}`} />
         <meta property="type" content="article" />
         <meta property="site_name" content={title==null?  'Deepak - Blog':title} />
         <meta property="og:title" content={ogTitle==null? 'Deepak - Blog':title} />

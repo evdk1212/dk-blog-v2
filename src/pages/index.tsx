@@ -8,6 +8,7 @@ import { db } from '../firebase.js';
 import type { DocumentData } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
 import Script from 'next/script.js'
+import Layout from '@/components/layout.js'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,7 +26,8 @@ export default function Home() {
   }, []);
   return (
     <>
-      <section className={` ${styles['main2']} container `}>
+    <Layout  title={undefined} description={undefined} ogTitle={undefined} ogDescription={undefined} ogImage={undefined} postId={undefined}>
+    <section className={` ${styles['main2']} container `}>
         <div className="col-md-12 text-center">
           <h2 className="text-white">Featured Posts</h2>
           <p className="text-white"> Our top picks for you!</p>
@@ -72,6 +74,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+    </Layout>
+      
     </>
   )
 }
