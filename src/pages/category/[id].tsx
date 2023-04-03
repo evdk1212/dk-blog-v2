@@ -11,7 +11,7 @@ const CategoryPage = () => {
     const categoryRouter = useRouter();
     const { id } = categoryRouter.query;
     const filteredCategoryPosts = id ? categoryPosts.filter(post => post.category.categoryId == id) : categoryPosts;
-    const post = filteredCategoryPosts[0];
+    
     const useFetchCategoryPostsEffect = () => {
         useEffect(() => {
             const fetchData = async () => {
@@ -27,8 +27,7 @@ const CategoryPage = () => {
 
     useFetchCategoryPostsEffect();
 
-    const getCategory = () => {
-        
+    const getCategory = (post: DocumentData) => {
         return (
             <div className="p-5">
                 <div className="container" >
@@ -61,16 +60,23 @@ const CategoryPage = () => {
         );
     };
 
+    const post = filteredCategoryPosts[0];
+
     return (
-        <>
-            <Layout  title={post.category.category} description={`Discover everything you need to know about ${ post.category.category }`} ogTitle={post.category.category} ogDescription={`Discover everything you need to know about ${ post.category.category }`} ogImage={undefined} ogUrl={`https://blog.iam-deepak.me/category/${post.category.categoryId}`}>
+        <Layout
+            title={post?.category?.category}
+            description={`Discover everything you need to know about ${post?.category?.category}`}
+            ogTitle={post?.category?.category}
+            ogDescription={`Discover everything you need to know about ${post?.category?.category}`}
+            ogImage={undefined}
+            ogUrl={`https://blog.iam-deepak.me/category/${post?.category?.categoryId}`}
+        >
             <div className={` ${styles['main2']} `}>
-                {filteredCategoryPosts.length > 0 && getCategory()}
+                {filteredCategoryPosts.length > 0 && getCategory(post)}
                 {getContent()}
             </div>
-            </Layout>
-        </>
-    )
+        </Layout>
+    );
 }
 
 export default CategoryPage;
