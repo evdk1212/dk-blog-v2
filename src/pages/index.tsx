@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
   return (
     <>
-    <Layout  title="Deepak - Blog" description='Find interesting daily blog posts by Deepak' ogTitle="Deepak - Blog" ogDescription='Find interesting daily blog posts by Deepak' ogImage={undefined} postId={undefined}>
+    <Layout  title={undefined} description={undefined} ogTitle={undefined} ogDescription={undefined} ogImage={undefined} postId={undefined}>
     <section className={` ${styles['main2']} container `}>
         <div className="col-md-12 text-center">
           <h2 className="text-white">Featured Posts</h2>
