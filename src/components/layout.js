@@ -6,9 +6,9 @@ const Layout = ({ children, title, description, ogTitle, ogDescription, ogImage,
   return (
     <>
        <Head>
-        <title>{title==null? 'Deepak - Blog':title}</title>
+        <title>{title}</title>
         <meta property="title" content={title==null?  'Deepak - Blog':title}/>
-        <meta property="description" content={description==null?  'Find interesting daily blog posts by Deepak':description} />
+        <meta property="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="url" content={postId==null? 'https://blog.iam-deepak.me':`https://blog.iam-deepak.me/post/${postId}`} />

@@ -68,7 +68,7 @@ const CategoryPage = () => {
             description={`Discover everything you need to know about ${post?.category?.category}`}
             ogTitle={post?.category?.category}
             ogDescription={`Discover everything you need to know about ${post?.category?.category}`}
-            ogImage={undefined}
+            ogImage={post?.postImgPath}
             postId={undefined}
         >
             <div className={` ${styles['main2']} `}>
