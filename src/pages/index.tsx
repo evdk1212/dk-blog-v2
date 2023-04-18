@@ -65,7 +65,7 @@ export default function Home() {
                   <li className="nav-item"><a className={`${styles['nav-link']} nav-link`} >Home</a></li>
                   <li className="nav-item"><a className={`${styles['nav-link']} nav-link`} >About</a></li>
                   <li className="nav-item"><a className={`${styles['nav-link']} nav-link`} >Terms & Conditions</a></li>
-                  <li className="nav-item"><a className={`${styles['nav-link']} nav-link`}>Contact</a></li>
+                  <li className="nav-item"><a  href='https://iam-deepak.me' className={`${styles['nav-link']} nav-link`}>Contact</a></li>
                 </ul>
               </div>
               <p className="mb-2 mt-2">Copyrights ©2023 Deepak</p>

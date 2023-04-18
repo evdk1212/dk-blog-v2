@@ -33,5 +33,11 @@
     margin-right: 10px;
     margin-left: 5px;
   }
+  .ul:hover .li .a{
+    color: #30edf4;
+  }
+  .ul:hover .li .a:not(:hover){
+    color: white;
+  }
 }
 
