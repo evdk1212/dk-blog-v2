@@ -54,7 +54,7 @@ const Post = () => {
 
           <Layout key={post.id} title={post.title} description={post.excerpt} ogTitle={post.title} ogDescription={post.excerpt} ogImage={post.postImgPath} postId={post.id}>
             <div key={post.id} className={`container ${styles['main2']}`}>
-            <button onClick={handleToggleReaderMode} className='btn-theme'>
+            <button onClick={handleToggleReaderMode} className='btn-theme mt-3 text-black mb-3' style={{borderRadius: '10%'}}>
               {readerModeVisible ? "Close Reader Mode" : "Reader Mode"}
             </button>
             {readerModeVisible && (

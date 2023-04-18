@@ -19,10 +19,10 @@ const NavbarComponent = () => {
   return (
     <nav className={` ${styles['nav-cus']} navbar navbar-expand-lg fixed-top`}>
       <div className="navbar-collapse justify-content-center" style={{ overflowX: 'auto' }}>
-        <ul className={`${styles['navbar-nav']} navbar-nav d-flex flex-row`} style={{ height: '50px', fontSize: '18px' }}>
+        <ul className={` ${styles['ul']} navbar-nav d-flex flex-row`} style={{ height: '50px', fontSize: '18px' }}>
           {categories.map(category => (
-            <li className="nav-item ml-3" key={category.id}>
-              <Link href={`/category/${category.id}`} className={`${styles['nav-link']} nav-link`}>{category.category}</Link>
+            <li className={` ${styles['li']} nav-item ml-3 `} key={category.id}>
+              <Link href={`/category/${category.id}`} className={`${styles['a']}`}>{category.category}</Link>
             </li>
           ))}
         </ul>

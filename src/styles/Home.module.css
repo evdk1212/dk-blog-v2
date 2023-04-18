@@ -9,13 +9,28 @@
   /* min-height: 100vh; */
 }
 
-
+.cus-text{
+  opacity: 0; 
+  transform: translateY(50px);
+  animation: fade-in-up 0.5s ease forwards;
+}
 .nav-link{
   color: var(--text-color);
 }
 .nav-link:hover{
-  color: rebeccapurple;
+  color: #30edf4;
 }
 .hidden{
   display: none;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0; 
+    transform: translateY(50px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); 
+  }
 }

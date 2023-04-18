@@ -1,33 +1,37 @@
 .nav-cus{
   margin-top: 50px;
   height: 50px;
-  background-color: var(--header-color);
-}
-
-.nav-link:hover{
-    color: rebeccapurple;
+  background-color: #111111;
 }
 
 
+
+
+
+
+.a {
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px;
+  transition: 0.5s ease;
+}
+.ul:hover .li .a{
+  color: #30edf4;
+}
+.ul:hover .li .a:not(:hover){
+  color: white;
+  opacity: 0.3;
+  filter: blur(1px);
+}
 @media only screen and (max-width: 600px) {
-  .nav-link {
-    font-size: 1px;
+  .a {
+    font-size: 13px;
     white-space: nowrap;
     margin-right: 10px;
     margin-left: 5px;
   }
 }
 
-.nav-item {
-  padding: 10px 0;
-  margin: 0;
-  display: block;
-}
-.nav-link {
-  font-size: 13px;
-  text-decoration: none;
-}
-.nav-link:active {
-    color: red;
-  }
-  

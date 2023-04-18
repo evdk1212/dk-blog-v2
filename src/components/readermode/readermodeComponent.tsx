@@ -9,10 +9,12 @@ type ReaderModeProps = {
 const ReaderMode: React.FC<ReaderModeProps> = ({ content, onClose }) => {
   return (
     <div className={styles['readerMode']}>
-      <div className={styles['readerModeContent']} dangerouslySetInnerHTML={{ __html: content }} />
-      <button className={styles.readerModeCloseButton} onClick={onClose}>
+      <div className='pt-1 pl-1 pr-1 pb-1'>
+      <div className={`${styles['readerModeContent']}`} dangerouslySetInnerHTML={{ __html: content }} />
+      </div>
+      {/* <button className={styles.readerModeCloseButton} onClick={onClose}>
         Close
-      </button>
+      </button> */}
     </div>
   );
 };

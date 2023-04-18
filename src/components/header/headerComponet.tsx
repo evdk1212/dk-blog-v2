@@ -7,7 +7,7 @@ const headerComponet = () => {
       <Link href={'/'}>
         <header className={`${styles['header-cus']} navbar navbar-expand-lg fixed-top   shadow-effect   `}>
           <div className="container col-md-5  justify-content-center">
-            <div className="site-logo text-white">Deepak</div>
+            <div className="site-logo ">Deepak</div>
           </div>
         </header>
       </Link>

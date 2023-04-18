@@ -1,16 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+
+
 import styles from '@/styles/Home.module.css'
 
-import { HeaderComponent, NavbarComponent, PostCardComponent } from '../components/index.js'
+import { PostCardComponent } from '../components/index.js'
 import { db } from '../firebase.js';
 import type { DocumentData } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
-import Script from 'next/script.js'
+
 import Layout from '@/components/layout.js'
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home() {
   const [posts, setPosts] = useState<DocumentData[]>([]);
@@ -29,8 +28,8 @@ export default function Home() {
     <Layout  title={undefined} description={undefined} ogTitle={undefined} ogDescription={undefined} ogImage={undefined} postId={undefined}>
     <section className={` ${styles['main2']} container `}>
         <div className="col-md-12 text-center">
-          <h2 className="text-white">Featured Posts</h2>
-          <p className="text-white"> Our top picks for you!</p>
+          <h2 className={`${styles['cus-text']} text-white mt-4`}>Featured Posts</h2>
+          <p className={`${styles['cus-text']} text-white`}> Our top picks for you!</p>
         </div>
         <div className="row">
           {featuredPosts.map(post => (
@@ -44,8 +43,8 @@ export default function Home() {
 
       <section className="container mt-5">
         <div className="col-md-12 text-center">
-          <h2 className="text-white">Latest Posts</h2>
-          <p className="text-white">Explore our latest and greatest!</p>
+          <h2 className={`${styles['cus-text']} text-white`}>Latest Posts</h2>
+          <p className={`${styles['cus-text']} text-white`}>Explore our latest and greatest!</p>
         </div>
         <div className="row">
           {posts.map(post => (
@@ -58,7 +57,7 @@ export default function Home() {
 
 
       <footer>
-        <div className="container">
+        <div className="container mt-5">
           <div className="row">
             <div className="col-md-12 text-center">
               <div>
